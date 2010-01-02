@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>api_parameters (WineDotComApiRequest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/wine_dot_com_api_request.rb, line 39</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">api_parameters</span>
+      <span class="ruby-identifier">url_params</span> = <span class="ruby-value str">&quot;&quot;</span>
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@api_resource</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;catalog&quot;</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;offset=#{@search_offset}&quot;</span>   <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_offset</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;size=#{@search_size}&quot;</span>       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_size</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;search=#{@search_search}&quot;</span>   <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_search</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;filter=#{@search_filter}&quot;</span>   <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_filter</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;state=#{@search_state}&quot;</span>     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_state</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;sort=#{@search_sort}&quot;</span>       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_sort</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;instock=#{@search_instock}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_instock</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@api_resource</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;categorymap&quot;</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;filter=#{@search_filter}&quot;</span>   <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_filter</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;search=#{@search_search}&quot;</span>   <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_search</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@api_resource</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;reference&quot;</span>
+        <span class="ruby-identifier">url_params</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;filter=#{@search_filter}&quot;</span>   <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@search_filter</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">url_params</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
