@@ -43,7 +43,7 @@ First release.
 
 = Credits
 
-WineDotComApiRequest is maintained by {Christopher Meiklejohn}[mailto:cmeik@me.com].
+WineDotComApiRequest is maintained by {Christopher Meiklejohn}[mailto:cmeik@me.com].  Contact me if you'd like to request any features or have any questions or feedback.
 
 = License
 
