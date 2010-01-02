@@ -1,0 +1,9 @@
+MIT-LICENSE
+Manifest
+README.rdoc
+Rakefile
+init.rb
+lib/wine_dot_com_api_request.rb
+lib/wine_dot_com_api_request/configuration.rb
+test/wine_dot_com_api_request_test.rb
+wine_dot_com_api_request.gemspec
