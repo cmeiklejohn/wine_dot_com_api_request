@@ -8,6 +8,15 @@
 # Copyright:: Copyright (c) 2010 Christopher Meiklejohn
 # License:: Distributes under the terms specified in the MIT-LICENSE file.
 #
+# Usage example: 
+#w = WineDotComApiRequest.new(:search => 'mondavi cabernet',
+#                             :format => :xml,
+#                             :resource => :catalog,
+#                             :size => 1,
+#                             :offset => 0)
+#
+# w.query
+#
 # To-do: 
 # * Build a better interface for filters 
 # * Build a better interface for sortBy
@@ -16,6 +25,7 @@
 # * Extract out api key and base url into configuration parameters
 #
 # See: http://api.wine.com/wiki/2-catalog-queries
+require "wine_dot_com_api_request/configuration"
 require 'net/http'
 require 'uri'
 
@@ -75,14 +85,14 @@ class WineDotComApiRequest
       api_url
     end
     
-    # Execute a search.
+    # Execute a search.  Returns either raw json or xml.
     def query(options = {})
       options.each_pair do |key, value|
         self.send("#{key}=", value)
       end
       
-      raise 'No API base URL provided.' unless @base_url
-      raise 'No API key provided.' unless @api_key
+      raise 'No API base URL provided.' unless @@base_url
+      raise 'No API key provided.' unless @@api_key
       raise 'No resource specified.' unless @resource
       raise 'No format specified.' unless @format
       
@@ -97,7 +107,7 @@ class WineDotComApiRequest
   
     # Generate the url to make the API call to.
     def api_url
-      "#{base_url}/#{format}/#{resource}?apikey=#{api_key}#{parameters}"
+      "#{@@base_url}/#{format}/#{resource}?apikey=#{@@api_key}#{parameters}"
     end
 
     # parameters overrides attribute reader and returns custom results based on resource type.
