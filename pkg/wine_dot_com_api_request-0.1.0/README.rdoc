@@ -1,7 +1,0 @@
-= Credits
-
-WineDotComApiRequest is maintained by {Christopher Meiklejohn}[mailto:cmeik@me.com].
-
-= License
-
-WineDotComApiRequest is Copyright © 2010 Christopher Meiklejohn.  It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
