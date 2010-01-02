@@ -59,6 +59,10 @@
                 lib/wine_dot_com_api_request.rb
                 </a>
         <br />
+                <a href="../files/pkg/wine_dot_com_api_request-0_1_0/lib/wine_dot_com_api_request_rb.html">
+                pkg/wine_dot_com_api_request-0.1.0/lib/wine_dot_com_api_request.rb
+                </a>
+        <br />
             </td>
         </tr>
 
@@ -86,11 +90,16 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
+      <a href="#M000010">api_parameters</a>&nbsp;&nbsp;
       <a href="#M000005">api_parameters</a>&nbsp;&nbsp;
+      <a href="#M000009">api_url</a>&nbsp;&nbsp;
       <a href="#M000004">api_url</a>&nbsp;&nbsp;
       <a href="#M000003">do_get</a>&nbsp;&nbsp;
+      <a href="#M000008">do_get</a>&nbsp;&nbsp;
+      <a href="#M000006">new</a>&nbsp;&nbsp;
       <a href="#M000001">new</a>&nbsp;&nbsp;
       <a href="#M000002">url</a>&nbsp;&nbsp;
+      <a href="#M000007">url</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -111,10 +120,34 @@
       <div class="name-list">
         <table>
         <tr class="top-aligned-row context-row">
+          <td class="context-item-name">api_affiliate_id</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Affiliate ID for revenue sharing.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">api_affiliate_id</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Affiliate ID for revenue sharing.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
           <td class="context-item-name">api_base_url</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Required API parameters.
+Base URL of API.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">api_base_url</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Base URL of API.
 
 </td>
         </tr>
@@ -122,7 +155,15 @@ Required API parameters.
           <td class="context-item-name">api_format</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Required API parameters.
+API result format. Available API formats: xml, json.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">api_format</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+API result format. Available API formats: xml, json.
 
 </td>
         </tr>
@@ -130,7 +171,15 @@ Required API parameters.
           <td class="context-item-name">api_key</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Required API parameters.
+API key from Wine.com.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">api_key</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+API key from Wine.com.
 
 </td>
         </tr>
@@ -138,7 +187,15 @@ Required API parameters.
           <td class="context-item-name">api_parameters</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Required API parameters.
+API parameters.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">api_parameters</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+API parameters.
 
 </td>
         </tr>
@@ -146,7 +203,17 @@ Required API parameters.
           <td class="context-item-name">api_resource</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Required API parameters.
+API requested resource. Available API resources: catalog, reference,
+categorymap.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">api_resource</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+API requested resource. Available API resources: catalog, reference,
+categorymap.
 
 </td>
         </tr>
@@ -154,7 +221,15 @@ Required API parameters.
           <td class="context-item-name">api_version</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Required API parameters.
+API version number. Available API versions: v1.0, v2.3.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">api_version</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+API version number. Available API versions: v1.0, v2.3.
 
 </td>
         </tr>
@@ -162,7 +237,15 @@ Required API parameters.
           <td class="context-item-name">search_filter</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Optional search criteria.
+Search filter. Ex. filter=categories(7155+124)+rating(85|100).
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">search_filter</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Search filter. Ex. filter=categories(7155+124)+rating(85|100).
 
 </td>
         </tr>
@@ -170,7 +253,15 @@ Optional search criteria.
           <td class="context-item-name">search_instock</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Optional search criteria.
+In stock. Boolean search value.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">search_instock</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+In stock. Boolean search value.
 
 </td>
         </tr>
@@ -178,15 +269,15 @@ Optional search criteria.
           <td class="context-item-name">search_offset</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Optional search criteria.
+Search offset to start at.
 
 </td>
         </tr>
         <tr class="top-aligned-row context-row">
-          <td class="context-item-name">search_search</td>
+          <td class="context-item-name">search_offset</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Optional search criteria.
+Search offset to start at.
 
 </td>
         </tr>
@@ -194,7 +285,15 @@ Optional search criteria.
           <td class="context-item-name">search_size</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Optional search criteria.
+Number of records to return.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">search_size</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Number of records to return.
 
 </td>
         </tr>
@@ -202,7 +301,15 @@ Optional search criteria.
           <td class="context-item-name">search_sort</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Optional search criteria.
+Sort key. Ex. sort=rating|ascending.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">search_sort</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Sort key. Ex. sort=rating|ascending.
 
 </td>
         </tr>
@@ -210,7 +317,31 @@ Optional search criteria.
           <td class="context-item-name">search_state</td>
           <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
           <td class="context-item-desc">
-Optional search criteria.
+Ship to state. Two letter abbrev. Ex. MA.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">search_state</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Ship to state. Two letter abbrev. Ex. MA.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">search_string</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Search terms.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">search_string</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+Search terms.
 
 </td>
         </tr>
@@ -224,6 +355,23 @@ Optional search criteria.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="WineDotComApiRequest.src/M000006.html" target="Code" class="method-signature"
+            onclick="popupCode('WineDotComApiRequest.src/M000006.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Inialize the required parameters, and setup the request defaults.
+</p>
+        </div>
+      </div>
+
       <div id="method-M000001" class="method-detail">
         <a name="M000001"></a>
 
@@ -236,31 +384,30 @@ Optional search criteria.
       
         <div class="method-description">
           <p>
-Inialize the required parameters, and setup the request.
+Inialize the required parameters, and setup the request defaults.
 </p>
         </div>
       </div>
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000002" class="method-detail">
-        <a name="M000002"></a>
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
 
         <div class="method-heading">
-          <a href="WineDotComApiRequest.src/M000002.html" target="Code" class="method-signature"
-            onclick="popupCode('WineDotComApiRequest.src/M000002.html');return false;">
-          <span class="method-name">url</span><span class="method-args">()</span>
+          <a href="WineDotComApiRequest.src/M000010.html" target="Code" class="method-signature"
+            onclick="popupCode('WineDotComApiRequest.src/M000010.html');return false;">
+          <span class="method-name">api_parameters</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Return URL that request will be made to.
+<a href="WineDotComApiRequest.html#M000005">api_parameters</a> overrides
+attribute reader and returns custom results based on resource type.
 </p>
         </div>
       </div>
-
-      <h3 class="section-bar">Private Instance methods</h3>
 
       <div id="method-M000005" class="method-detail">
         <a name="M000005"></a>
@@ -280,6 +427,24 @@ attribute reader and returns custom results based on resource type.
         </div>
       </div>
 
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+          <a href="WineDotComApiRequest.src/M000009.html" target="Code" class="method-signature"
+            onclick="popupCode('WineDotComApiRequest.src/M000009.html');return false;">
+          <span class="method-name">api_url</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Generate the <a href="WineDotComApiRequest.html#M000002">url</a> to make
+the API call to.
+</p>
+        </div>
+      </div>
+
       <div id="method-M000004" class="method-detail">
         <a name="M000004"></a>
 
@@ -293,7 +458,7 @@ attribute reader and returns custom results based on resource type.
         <div class="method-description">
           <p>
 Generate the <a href="WineDotComApiRequest.html#M000002">url</a> to make
-the api call to.
+the API call to.
 </p>
         </div>
       </div>
@@ -310,7 +475,58 @@ the api call to.
       
         <div class="method-description">
           <p>
-Perform GET request and return results.
+private Perform GET request and return results.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="WineDotComApiRequest.src/M000008.html" target="Code" class="method-signature"
+            onclick="popupCode('WineDotComApiRequest.src/M000008.html');return false;">
+          <span class="method-name">do_get</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+private Perform GET request and return results.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000002" class="method-detail">
+        <a name="M000002"></a>
+
+        <div class="method-heading">
+          <a href="WineDotComApiRequest.src/M000002.html" target="Code" class="method-signature"
+            onclick="popupCode('WineDotComApiRequest.src/M000002.html');return false;">
+          <span class="method-name">url</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return URL that request will be made to. Mainly for debugging purposes.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="WineDotComApiRequest.src/M000007.html" target="Code" class="method-signature"
+            onclick="popupCode('WineDotComApiRequest.src/M000007.html');return false;">
+          <span class="method-name">url</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return URL that request will be made to. Mainly for debugging purposes.
 </p>
         </div>
       </div>
